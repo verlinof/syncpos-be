@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 //Routes
 app.get("/api", (req, res) => {
   res.json({
-    message: "see full documentation",
+    message: "see project",
     project_url: "https://github.com/verlinof/syncpos-be",
   });
 });
