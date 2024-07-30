@@ -1,14 +1,14 @@
-const express = require('express');
-const pasienController = require('../controllers/pasien.controller');
-const { checkAuth } = require('../middleware/check-auth');
+const express = require("express");
+const pasienController = require("../controllers/pasien.controller");
+const { checkAuth } = require("../middleware/check-auth");
 
 const router = express.Router();
 
-router.get('/', pasienController.index);
-router.get('/:nik', checkAuth, pasienController.show);
-router.get('/:nik/checkup', checkAuth, pasienController.showCheckup);
-router.post('/', checkAuth, pasienController.store);
+router.get("/", pasienController.index);
+router.get("/:nik", checkAuth, pasienController.show);
+router.get("/:nik/checkup", checkAuth, pasienController.showCheckup);
+router.post("/", checkAuth, pasienController.store);
 // router.patch('/:nik', checkAuth, pasienController.update);
 // router.delete('/:nik', checkAuth, pasienController.destroy);
 
-module.exports = router
+module.exports = router;
